@@ -49,6 +49,7 @@ def whatsapp_reply():
     import os
     file_path = os.path.join(os.path.dirname(__file__), "leads.txt")
 
+   if phone:
     with open(file_path,'a') as f:
         f.write(phone + "\n")
 
@@ -78,6 +79,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
     
+
 
 
 

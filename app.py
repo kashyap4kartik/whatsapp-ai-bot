@@ -10,14 +10,15 @@ app = Flask(__name__)
 
 import os
 from twilio.rest import Client as TwilioClient
-TWILIO_SID = os.environ.get("TWILIO_SID")
-TWILIO_TOKEN = os.environ.get("TWILIO_TOKEN")
+TWILIO_SID = os.environ.get("AC5b00b1b78b282cea1910db9b50bf9e8e")
+TWILIO_TOKEN = os.environ.get("d47b5b5ff34af2e4c72f5fb8e37478eb")
+client = Groq(api_key=os.environ.get("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"))
 
 twilio_client = TwilioClient(TWILIO_SID, TWILIO_TOKEN)
 
 
 # Groq key
-client = Groq(api_key="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")
+client = Groq(api_key="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")
 
 BUSINESS_INFO = """
 Business Name: Bright Future Coaching
@@ -80,6 +81,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
     
+
 
 
 

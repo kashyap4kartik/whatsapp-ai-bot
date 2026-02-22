@@ -13,8 +13,7 @@ TWILIO_SID = os.environ.get("TWILIO_SID")
 TWILIO_TOKEN = os.environ.get("TWILIO_TOKEN")
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
-print("SID:", TWILIO_SID)
-print("TOKEN:", TWILIO_TOKEN)
+
 
 # Create clients
 twilio_client = TwilioClient(TWILIO_SID, TWILIO_TOKEN)
@@ -81,6 +80,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
     
+
 
 
 
